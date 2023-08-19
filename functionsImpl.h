@@ -26,8 +26,8 @@ void keySearch1(struct auxArray auxData[], int key, int startEnd[]){
 	int found = FALSE;
 	for(int i = 0; i < TAM && found == FALSE; i++){
  		if(auxData[i].key > key){
-       	    startEnd[0] = auxData[i-1].position;
-            startEnd[1] = auxData[i].position;
+       	    startEnd[0] = i-1;
+            startEnd[1] = i;
 			found = TRUE;
        }
     }
@@ -36,8 +36,7 @@ void keySearch1(struct auxArray auxData[], int key, int startEnd[]){
 void keySearch2(int array[], int startEnd[], int key, struct auxArray auxData[]){
 	int found = FALSE;
 	for(int i = startEnd[0]; i <= startEnd[1] && found == FALSE; i++){
-        int index = auxData[i].position;
-		if(array[index] == key){
+		if(array[i] == key){
 			printf("\nChave encontrada na posição %d no array.\n\n", i);
 			found = TRUE;
 		}
