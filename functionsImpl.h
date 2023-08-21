@@ -37,12 +37,12 @@ void keySearch2(int array[], int startEnd[], int key, struct auxArray auxData[])
 	int found = FALSE;
 	for(int i = startEnd[0]; i <= startEnd[1] && found == FALSE; i++){
 		if(array[i] == key){
-			printf("\nChave encontrada na posição %d no array.\n\n", i);
+			printf("\nChave encontrada na posicao %d no array.\n\n", i);
 			found = TRUE;
 		}
 	}
 	if(!found){
-	    printf("\nChave não encontrada.\n");
+	    printf("\nChave nao encontrada.\n");
 	}
 }
 
