@@ -4,7 +4,7 @@
 
 #define TRUE 1
 #define FALSE 0
-#define TAM 10
+#define TAM 1000
 
 struct auxArray{
     int key;
